@@ -30,6 +30,7 @@ html, body, h1 {
 
 .sub {
   color: #64dcdc;
+  font-size: 5vw;
   letter-spacing: 1em;
 }
 
@@ -47,7 +48,7 @@ text set in the data-text attribute. */
   color: #Ffeacb;
   text-shadow:
     0 0 4px #Ffeacb;
-  font-size: 3vw;
+  font-size: 5vw;
   font-family: 'Kingthings Spikeless', sans-serif;
   letter-spacing: 0.5em;
   /* Animation provies a slight random skew. Check bottom of doc
@@ -436,5 +437,3 @@ ul li:hover:nth-child(4) a:before{
 ul li:hover:nth-child(4) a:after{
   background: #e46880;
 }
-
-
