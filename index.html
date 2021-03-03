@@ -79,6 +79,7 @@
                 contentType: 'application/json',
                 success: function(data) {
                   console.log(data.presence_count)
+	          console.log("test")
                   var text = `There are <b>${data.presence_count}</b> currently online user`
                   $(".onlineUser").html(text);
                 },
@@ -87,7 +88,7 @@
                  
                 }
               });
-              </script> 
+             </script> 
         </div>
 
         <div id="wrapper-3" class="section">
