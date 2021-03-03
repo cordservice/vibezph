@@ -77,6 +77,13 @@
                 dataType: 'json',
                 crossDomain: true,
                 contentType: 'application/json',
+		headers: {
+            		'Access-Control-Allow-Origin': '*',
+          	},
+		cors: true,
+          	beforeSend: function (xhr) {
+            		xhr.setRequestHeader ("Authorization", "Basic " + btoa(""));
+          	},
                 success: function(data) {
                   console.log(data.presence_count)
 	          console.log("test")
@@ -85,6 +92,7 @@
                 },
                 error: function(data) {
                   console.log(data);
+	
                  
                 }
               });
