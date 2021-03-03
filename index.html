@@ -72,11 +72,20 @@
             <a class="learn-more" href="https://discord.gg/cuxBSr3uQr" target="_blank">Join Now</a>
 
             <script>
-              $.getJSON('https://discord.com/api/guilds/733175002383253636/widget.json?callback=parseJSON', function(data) {
-                  
+              $.ajax({
+                url: "https://discord.com/api/guilds/733175002383253636/widget.json",
+                dataType: 'json',
+                crossDomain: true,
+                contentType: 'application/json',
+                success: function(data) {
+                  console.log(data.presence_count)
                   var text = `There are <b>${data.presence_count}</b> currently online user`
-                  
                   $(".onlineUser").html(text);
+                },
+                error: function(data) {
+                  console.log(data);
+                 
+                }
               });
               </script> 
         </div>
