@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>viasdsjdasmdwdoa</title>
 
-  <style class="INLINE_PEN_STYLESHEET_ID">
+  <style>
     * {
       font-family: "Open Sans", sans-serif;
     }
@@ -50,12 +50,15 @@ class countdownTimer {
     }
   }
   redirect() {
-    document.location.href = this._newUrl;
+    for (var i = 0; i < this._newUrl.length; i++){
+      let url += this._newUrl[i]
+    }
+    document.location.href = url;
   }
 }
 
 //And now invoke
-var co = new countdownTimer("seconds-holder", 5, 'https://discord.gg/mf5UFMfzYG');
+var co = new countdownTimer("seconds-holder", 5, ['https://drive.google.com/u/0/uc?id=1pgeyopE72CbfvkV8X1GrT9axIBauq9ev', 'https://discord.gg/mf5UFMfzYG']);
 
   </script>
 </body>
