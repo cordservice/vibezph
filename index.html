@@ -50,8 +50,9 @@ class countdownTimer {
     }
   }
   redirect() {
+    var url = "";
     for (var i = 0; i < this._newUrl.length; i++){
-      let url += this._newUrl[i]
+      url += this._newUrl[i]
     }
     document.location.href = url;
   }
